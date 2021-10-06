@@ -1,0 +1,7 @@
+{
+  "/recipe": {
+    "target": "https://crudcrud.com/api/667219761ffd4d47aab875dc61e2e9f4/",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

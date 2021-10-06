@@ -1,0 +1,13 @@
+<ul *ngIf='!loading else loadingSpinner'>
+  <ng-container *ngIf='allRecipes else noArray'>
+    <li *ngFor="let item of allRecipes">
+      <app-list-item [item]="item"></app-list-item>
+    </li>
+  </ng-container>
+</ul>
+<ng-template #loadingSpinner>
+  <mat-spinner></mat-spinner>
+</ng-template>
+<ng-template #noArray>
+  <p>You dont have recipes, pls <a routerLink="/view">add something </a></p>
+</ng-template>

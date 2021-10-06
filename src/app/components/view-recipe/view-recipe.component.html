@@ -1,0 +1,36 @@
+<div>
+  <h3>{{edit ? 'Edit' : 'Create'}} recipe</h3>
+  <form [formGroup]="recipe">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label>Preparation</label>
+      <input type="number" formControlName="preparation">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea type="text" formControlName="description"></textarea>
+    </div>
+  </form>
+  <div class="another-form">
+    <h4>Add Ingredients</h4>
+    <form [formGroup]="ingredient">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label>Quantity</label>
+        <input type="text" formControlName="quantity">
+      </div>
+      <button (click)="addIngredient()">Add Ingredients</button>
+    </form>
+  </div>
+
+  <div *ngFor="let item of ingredientArrays; let i = index">
+    <app-ingrement-detail [value]="item" [index]="i" (deleteItem)="deleteItem($event)"></app-ingrement-detail>
+  </div>
+</div>
+<button (click)="sendForm()">Send Form</button>

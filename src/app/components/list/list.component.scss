@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+ul {
+  list-style: none;
+}
+li {
+  display: block;
+}

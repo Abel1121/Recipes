@@ -1,0 +1,13 @@
+app-navbar {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+}
+app-list {
+  grid-column: 1/2;
+  grid-row: 2/11;
+}
+app-view-recipe, app-details-recipe {
+  padding: 20px;
+  grid-column: 2/6;
+  grid-row: 2/11
+}
